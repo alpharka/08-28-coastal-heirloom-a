@@ -61,7 +61,7 @@ export default function Home() {
   const shownPhoto = lightbox === null ? null : photos[lightbox];
 
   return <div className={`site-shell ${opened ? "is-open" : ""}`}>
-    <audio ref={audioRef} src={config.audioSrc} loop aria-hidden="true" />
+    {config.audioSrc ? <audio ref={audioRef} src={config.audioSrc} loop aria-hidden="true" /> : null}
     <div className="cover" aria-hidden={opened}>
       <div className="cover-image" />
       <div className="cover-shade" />
